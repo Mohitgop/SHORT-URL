@@ -13,6 +13,7 @@ connectToMongoDB("mongodb://localhost:27017/short-url")
 
 app.get("/test", async (req, res) => {
     const allUrls = await URL.find({});
+    
 
     // Make HTML page
     return res.end(
