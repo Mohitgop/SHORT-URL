@@ -14,7 +14,7 @@ async function restrictToLoggedinUserOnly(req, res, next) {
 }
 
 async function checkAuth( req, res, next) {
-    const userUid = req.headers?.["authorization"];
+    const userUid = req.headers["authorization"];
     const token = userUid.split(" Bearer ")[1]; // Assuming Bearer token format
 
     // const userUid = req.cookies?.uid;
